@@ -1,0 +1,59 @@
+.content {
+    width: 100%;
+    height: 400px;
+    padding: 0 25px 25px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 0 0 25px 25px;
+}
+
+.todolist {
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+}
+
+.quest {
+    width: 100%;
+    height: 39px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: rgb(227, 249, 255);
+    border: 1.5px solid rgb(100, 149, 237, .5);
+    border-radius: 7px;
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+    > .text,
+    .delete {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    > .text {
+        padding: 0 10px;
+    }
+    > .delete {
+        right: 10px;
+        aspect-ratio: 1/1;
+        height: 75%;
+        background-color: cornflowerblue;
+        border: none;
+        border-radius: 5px;
+        &:hover {
+            cursor: pointer;
+            background-color: rgb(100,148,237,.90);
+        }
+        &:active {
+            background-color: rgb(100,148,237,.80);
+        }
+    }
+}
